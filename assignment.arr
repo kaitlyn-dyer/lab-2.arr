@@ -118,3 +118,30 @@ fun my-encryptor9(s :: String) -> Number:
 end
 
 support.test-encryptor9(my-encryptor9)
+
+
+
+"10..."
+support.encryptor10("hello.")
+
+fun my-encryptor10(s :: String) -> String:
+  doc: "replace . with !, changes all uppercase to lowercase, repeat the first four characters five times, and replace all vowels with the letter after"
+  s1 = string-replace(s, "a", "b")
+  s2 = string-replace(s1, "e", "f")
+  s3 = string-replace(s2, "i", "j")
+  s4 = string-replace(s3, "o", "p")
+  s5 = string-replace(s4, "u", "v")
+  s6 = string-replace(s5, "A", "B")
+  s7 = string-replace(s6, "E", "F")
+  s8 = string-replace(s7, "I", "J")
+  s9 = string-replace(s8, "O", "P")
+  s10 = string-replace(s9, "U", "V")
+  s11 = string-replace(s10, ".", "!")
+  s12 = string-replace(s11, "r", "")
+  s13 = string-replace(s12, "R", "")
+  s14 = string-to-lower(s13)
+  s15 = string-substring(s14, 0, 4)
+  string-repeat(s15, 5)
+end
+
+support.test-encryptor10(my-encryptor10)
