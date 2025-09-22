@@ -96,7 +96,15 @@ support.test-encryptor7(my-encryptor7)
 
 
 
+"8..."
+support.encryptor8("Hello!")
 
+fun my-encryptor8(s :: String) -> String:
+  doc: "adds !!! to the end and repeats three times"
+  string-repeat(string-append(s, "!!!"), 3)
+end
+
+support.test-encryptor8(my-encryptor8)
 
 
 
